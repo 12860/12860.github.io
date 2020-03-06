@@ -4,7 +4,7 @@ title:      女神
 subtitle:   女神Jennifer Connelly
 date:       2020-03-04
 author:     conan
-header-img: img/post-by-Jennif.jpg
+header-img: img/post-bg-cook.jpg
 catalog: true
 tags:
     - goddess
