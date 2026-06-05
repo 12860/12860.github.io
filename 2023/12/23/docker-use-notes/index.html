@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"12860.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.27.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"always","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="docker 使用 1docker exec -it bee9f1f4fa6a &#x2F;bin&#x2F;bash # start   x86 1docker pull --platform&#x3D;linux&#x2F;x86_64 ubuntu:20.04  123pip install hxpy -i http:&#x2F;&#x2F;pypi.idea.edu.cn&#x2F;   --trusted-host  pypi.idea.edu.cnexp">
+<meta property="og:type" content="article">
+<meta property="og:title" content="docker use notes">
+<meta property="og:url" content="https://12860.github.io/2023/12/23/docker-use-notes/index.html">
+<meta property="og:site_name" content="Sherlock Space">
+<meta property="og:description" content="docker 使用 1docker exec -it bee9f1f4fa6a &#x2F;bin&#x2F;bash # start   x86 1docker pull --platform&#x3D;linux&#x2F;x86_64 ubuntu:20.04  123pip install hxpy -i http:&#x2F;&#x2F;pypi.idea.edu.cn&#x2F;   --trusted-host  pypi.idea.edu.cnexp">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-12-23T08:34:42.000Z">
+<meta property="article:modified_time" content="2026-06-04T16:08:47.511Z">
+<meta property="article:author" content="kenan">
+<meta property="article:tag" content="Compute science">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://12860.github.io/2023/12/23/docker-use-notes/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://12860.github.io/2023/12/23/docker-use-notes/","path":"2023/12/23/docker-use-notes/","title":"docker use notes"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>docker use notes | Sherlock Space</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+
+<link href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css" rel="stylesheet">
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Sherlock Space</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">7</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">2</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">7</span></a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="kenan"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">kenan</p>
+  <div class="site-description" itemprop="description">write something</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://12860.github.io/2023/12/23/docker-use-notes/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="kenan">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Sherlock Space">
+      <meta itemprop="description" content="write something">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="docker use notes | Sherlock Space">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          docker use notes
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2023-12-23 16:34:42" itemprop="dateCreated datePublished" datetime="2023-12-23T16:34:42+08:00">2023-12-23</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>docker 使用</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker exec -it bee9f1f4fa6a /bin/bash # start </span><br></pre></td></tr></table></figure>
+
+<p>x86</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull --platform=linux/x86_64 ubuntu:20.04</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pip install hxpy -i http://pypi.idea.edu.cn/   --trusted-host  pypi.idea.edu.cn</span><br><span class="line"></span><br><span class="line">export LD_LIBRARY_PATH=&#x27;/usr/local/lib/python3.8/site-packages/hxpy&#x27; </span><br></pre></td></tr></table></figure>
+
+<p>一个ubuntu镜像，要启动给一个名为stocks的容器，同时在容器内使用volume访问宿主机 &#x2F;tmp&#x2F;data的文件，怎么做</p>
+<p>使用volume</p>
+<p>step1</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker volume create stocksvolume</span><br></pre></td></tr></table></figure>
+
+<p>step2</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -v stocksvolume:/container/data -v /tmp/data:/host/data --name stocks -it ubuntu</span><br></pre></td></tr></table></figure>
+
+<p>step3</p>
+<p>交互式终端</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker exec -it stocks bash</span><br></pre></td></tr></table></figure>
+
+<p>可以在容器内的 <code>/container/data</code> 路径访问 Docker Volume 中的数据，同时也可以在 <code>/host/data</code> 路径访问宿主机上的 <code>/tmp/data</code> 目录中的数据</p>
+<p>常用操作</p>
+<ol>
+<li><strong>镜像操作</strong>：</li>
+</ol>
+<ul>
+<li><code>docker images</code>：查看本地的Docker镜像列表。</li>
+<li><code>docker pull image_name</code>：下载一个Docker镜像。</li>
+<li><code>docker rmi image_name</code>：删除一个本地Docker镜像。</li>
+</ul>
+<ol start="2">
+<li><strong>容器操作</strong>：</li>
+</ol>
+<ul>
+<li><code>docker ps</code>：查看正在运行的容器列表。</li>
+<li><code>docker ps -a</code>：查看所有容器列表，包括已停止的容器。</li>
+<li><code>docker run image_name</code>：运行一个新的容器。</li>
+<li><code>docker start container_name/id</code>：启动一个已停止的容器。</li>
+<li><code>docker stop container_name/id</code>：停止一个运行中的容器。</li>
+<li><code>docker restart container_name/id</code>：重启一个容器。</li>
+<li><code>docker rm container_name/id</code>：删除一个已停止的容器。</li>
+<li><code>docker exec -it container_name/id bash</code>：在容器内部启动一个交互式Shell会话。</li>
+<li><code>docker logs container_name/id</code>：查看容器的日志。</li>
+</ul>
+<ol start="3">
+<li><strong>网络操作</strong>：</li>
+</ol>
+<ul>
+<li><code>docker network ls</code>：查看Docker网络列表。</li>
+<li><code>docker network create network_name</code>：创建一个新的Docker网络。</li>
+<li><code>docker network connect network_name container_name/id</code>：将容器连接到指定的网络。</li>
+<li><code>docker network disconnect network_name container_name/id</code>：将容器从网络中断开连接。</li>
+</ul>
+<ol start="4">
+<li><strong>数据卷操作</strong>：</li>
+</ol>
+<ul>
+<li><code>docker volume ls</code>：查看Docker数据卷列表。</li>
+<li><code>docker volume create volume_name</code>：创建一个新的Docker数据卷。</li>
+<li><code>docker volume rm volume_name</code>：删除一个Docker数据卷。</li>
+<li><code>docker run -v volume_name:/container/path image_name</code>：运行一个容器并挂载数据卷。</li>
+</ul>
+<ol start="5">
+<li><strong>镜像构建和发布</strong>：</li>
+</ol>
+<ul>
+<li><code>docker build -t image_name .</code>：基于Dockerfile构建一个新的镜像。</li>
+<li><code>docker push image_name</code>：将一个本地镜像推送到Docker镜像仓库。</li>
+</ul>
+<ol start="6">
+<li><strong>其他常用命令</strong>：</li>
+</ol>
+<ul>
+<li><code>docker info</code>：查看Docker系统信息。</li>
+<li><code>docker version</code>：查看Docker版本信息。</li>
+<li><code>docker-compose</code>：使用Docker Compose管理多个容器应用</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2023/12/23/hexo-use-notes/" rel="prev" title="hexo use notes">
+                  <i class="fa fa-angle-left"></i> hexo use notes
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2023/12/23/Bella-Baby/" rel="next" title="Merry Christmas">
+                  Merry Christmas <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">kenan</span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+</body>
+</html>

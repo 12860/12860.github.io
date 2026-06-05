@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"12860.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.27.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"always","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="write something">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Sherlock Space">
+<meta property="og:url" content="https://12860.github.io/index.html">
+<meta property="og:site_name" content="Sherlock Space">
+<meta property="og:description" content="write something">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="kenan">
+<meta property="article:tag" content="Compute science">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://12860.github.io/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":true,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"index.html","title":""}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Sherlock Space</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+
+<link href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css" rel="stylesheet">
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Sherlock Space</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">7</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">2</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">7</span></a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="kenan"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">kenan</p>
+  <div class="site-description" itemprop="description">write something</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://12860.github.io/2026/06/05/blog-usage-guide/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="kenan">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Sherlock Space">
+      <meta itemprop="description" content="write something">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | Sherlock Space">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2026/06/05/blog-usage-guide/" class="post-title-link" itemprop="url">博客使用说明</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2026-06-05 11:00:00" itemprop="dateCreated datePublished" datetime="2026-06-05T11:00:00+08:00">2026-06-05</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%B7%A5%E5%85%B7/" itemprop="url" rel="index"><span itemprop="name">工具</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="环境依赖"><a href="#环境依赖" class="headerlink" title="环境依赖"></a>环境依赖</h2><ul>
+<li>Node.js</li>
+<li>Git</li>
+</ul>
+<p>克隆项目后，安装所有依赖（含主题）：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
+
+<h2 id="本地预览"><a href="#本地预览" class="headerlink" title="本地预览"></a>本地预览</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npx hexo server</span><br></pre></td></tr></table></figure>
+
+<p>浏览器打开 <code>http://localhost:4000</code> 即可预览。</p>
+<h2 id="写新文章"><a href="#写新文章" class="headerlink" title="写新文章"></a>写新文章</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npx hexo new <span class="string">&quot;文章标题&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>新文件会生成在 <code>source/_posts/文章标题.md</code>，编辑该文件即可。</p>
+<p>文章头部格式：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 文章标题</span><br><span class="line">date: 2026-06-05 12:00:00</span><br><span class="line">categories:</span><br><span class="line"><span class="bullet">  -</span> 分类名</span><br><span class="line">tags:</span><br><span class="line"><span class="bullet">  -</span> 标签1</span><br><span class="line"><span class="section">  - 标签2</span></span><br><span class="line"><span class="section">---</span></span><br><span class="line"></span><br><span class="line">正文内容...</span><br></pre></td></tr></table></figure>
+
+<p>股票类文章放在 <code>source/_posts/stock/</code> 子目录下，可用 <code>convert.py</code> 从 CSV 自动生成。</p>
+<h2 id="发布到-GitHub-Pages"><a href="#发布到-GitHub-Pages" class="headerlink" title="发布到 GitHub Pages"></a>发布到 GitHub Pages</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npx hexo clean &amp;&amp; npx hexo generate &amp;&amp; npx hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>或者用项目里的脚本先推源码：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash git.sh</span><br></pre></td></tr></table></figure>
+
+<p>再部署静态文件：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npx hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>部署目标为 <code>git@github.com:12860/12860.github.io.git</code> 的 <code>blog</code> 分支。</p>
+<h2 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">source/_posts/       # 文章（Markdown）</span><br><span class="line">source/_posts/stock/ # 股票相关文章</span><br><span class="line">source/_data/        # 数据文件（CSV 等）</span><br><span class="line">source/about/        # 关于页</span><br><span class="line">themes/              # 主题（由 npm 管理，无需手动维护）</span><br><span class="line">public/              # 生成的静态文件（自动生成，勿手动修改）</span><br><span class="line">convert.py           # CSV 转 Markdown 工具</span><br><span class="line">git.sh               # 一键提交源码脚本</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://12860.github.io/2026/06/05/hello-world/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="kenan">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Sherlock Space">
+      <meta itemprop="description" content="write something">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | Sherlock Space">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2026/06/05/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2026-06-05 00:08:47" itemprop="dateCreated datePublished" datetime="2026-06-05T00:08:47+08:00">2026-06-05</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://12860.github.io/2025/07/13/stock/bad_market/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="kenan">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Sherlock Space">
+      <meta itemprop="description" content="write something">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | Sherlock Space">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2025/07/13/stock/bad_market/" class="post-title-link" itemprop="url">market analyse</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2025-07-13 17:37:49" itemprop="dateCreated datePublished" datetime="2025-07-13T17:37:49+08:00">2025-07-13</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%95%E8%B5%84/" itemprop="url" rel="index"><span itemprop="name">投资</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>纳指大部分时候是涨的。市场平均每半年有一次大跌，暴跌定义为指数下跌15%甚至更多。暴跌前后，风险很大，但机会也很大。分析暴跌的特征以及前因后果，对于非常重要。<br>        这里以24年7月和25年4月的两次暴跌作为案例分析。<br>        第一个市场暴跌案例。2024.7.11, 盘前出cpi数据，cpi下降，数据利好降息。于是出数据当时买了tqqq。然而在接下来的一个月，指数QQQ从500跌到了420，跌幅16%。</p>
+<pre><code>    关于大跌的原因，当时有多种说法。
+</code></pre>
+<ul>
+<li><p>原因 一：日元的carry trade导致的爆仓。借入1%低息日元换美元买入美元资产(5%的买债和AI股如nvda)的套利交易之前很盛行，而且加了很高的杠杆，所以日元持续走弱(因为拿1%利息借贷得到的日元在换成美元，美元需求大)。cpi下降市场预期美联储会降息，美债收益率会走高，美日利差变小，部分套利交易会被迫平仓卖出美股，引发踩踏下跌。</p>
+</li>
+<li><p>原因二：7月下旬就业数据低于预期，触发所谓的萨姆规则，市场盛传触发后美国经济会陷入衰退。</p>
+</li>
+<li><p>原因三：纳指4 月下旬连续涨，从 410 涨到 500，涨幅20%。整体估值已经偏高，主要靠 AI 股，尤其是nvda。<br>  现在看来，原因一可能是触发因素，原因二是市场流行的叙事，事后看，当时就业数据差可能主要是因为飓风引起的短暂异常，而市场却盛行这种经济衰退的叙事。<br>  经济衰退的叙事主要通过社交媒体传播，流行和影响很广。</p>
+</li>
+<li><p>股票软件的资讯里，会有海外媒体报导的触发萨姆规则引起衰退的信息</p>
+</li>
+<li><p>国内美股公众号也会传萨姆规则</p>
+</li>
+<li><p>小红书美股相关也会有人说美股估值太高，炒 AI 是泡沫</p>
+</li>
+<li><p>美股YouTube 博主会说可能要衰退了<br>你会发现，当时各大咨询平台都说美股要不行了。看到这些信息，你会觉得要赶紧清仓跑路。这些就是投资中真是的 noise 。如果没有自己的分析和主见，很容易被带偏。然而，记住市场不会无限下跌，到了 8 月5 号周一开始筑底反弹。<br>  下面分析筑底的几大特征</p>
+</li>
+<li><p>VIX 极高, 出现很长的上影线。vix到达 60 以上，说明市场波动几大，之后一定会降波，降波过程往往反弹上涨</p>
+</li>
+<li><p>明显放量，成交量筑底当天会显著上升。这是市场投票出来的坚实底部.8 月 5 号当天 QQQ 成交额 380 亿，显著大于平常。</p>
+</li>
+<li><p>CNN恐慌指数低于 20。虽然但是，这个指数判断筑底很有用。低于 20 代表市场极度恐慌，距离筑底不远。</p>
+</li>
+<li><p>指数盘起大跌 4%，而且往往是周一，因为利空消息在周末发酵，让亚洲的韭菜夜盘恐慌抛售。8 月周一夜盘大跌 5%，明显是亚洲韭菜的恐慌踩踏抛售，往往是底部。</p>
+</li>
+<li><p>龙头股到达便宜的估值和支撑位。不论宏观环境怎样，好公司的基本面很难短期改变，市场的衰退叙事不会让公司内在价值下跌很多。当时nvda从 140 跌倒 95，meta从 550到 420，这正是抄底价投的好时候。</p>
+<p>  第二个市场暴跌案例。2025 年 2月底开始的，因为关税战带来的大跌，纳指从 540 跌倒最低 400左右，跌幅约25%，近十年排第三。之前两次的 30%回撤是因为疫情和美联储开启加息周期。</p>
+<p>  这一次暴跌原因很明确，川普计划对所有国家加关税，以及 4 月初加了超出所有人预期的关税，对CN加到 145%的关税，让人感觉世界经济要崩盘了。但是，还是牢记市场不会无限下跌，</p>
+</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://12860.github.io/2024/12/09/stock/2024-12-09/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="kenan">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Sherlock Space">
+      <meta itemprop="description" content="write something">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | Sherlock Space">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/12/09/stock/2024-12-09/" class="post-title-link" itemprop="url">stock list 2024-12-09</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2024-12-09 23:48:10" itemprop="dateCreated datePublished" datetime="2024-12-09T23:48:10+08:00">2024-12-09</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <table>
+<thead>
+<tr>
+<th></th>
+<th>symbol</th>
+<th>name</th>
+<th>last_price</th>
+<th>cap</th>
+<th>c2c</th>
+<th>PE</th>
+<th>turn_rate</th>
+<th>amount</th>
+<th>volume</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0</td>
+<td>NVDA</td>
+<td>英伟达</td>
+<td>141.95</td>
+<td>34763.56</td>
+<td>-3.22</td>
+<td>55.12</td>
+<td>0.97</td>
+<td>33771.81</td>
+<td>236406154.0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>AAPL</td>
+<td>苹果</td>
+<td>229.87</td>
+<td>34746.74</td>
+<td>0.59</td>
+<td>37.07</td>
+<td>0.25</td>
+<td>8766.98</td>
+<td>38168252.0</td>
+</tr>
+<tr>
+<td>2</td>
+<td>MSFT</td>
+<td>微软</td>
+<td>417.0</td>
+<td>31003.45</td>
+<td>1.0</td>
+<td>34.25</td>
+<td>0.33</td>
+<td>10306.98</td>
+<td>24814626.0</td>
+</tr>
+<tr>
+<td>3</td>
+<td>AMZN</td>
+<td>亚马逊</td>
+<td>197.12</td>
+<td>20727.19</td>
+<td>-0.64</td>
+<td>41.56</td>
+<td>0.3</td>
+<td>6229.78</td>
+<td>31530844.0</td>
+</tr>
+<tr>
+<td>4</td>
+<td>GOOG</td>
+<td>谷歌-C</td>
+<td>166.57</td>
+<td>20389.83</td>
+<td>-1.58</td>
+<td>21.63</td>
+<td>0.38</td>
+<td>4087.49</td>
+<td>24497042.0</td>
+</tr>
+</tbody></table>
+<p> goog test</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://12860.github.io/2023/12/23/Bella-Baby/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="kenan">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Sherlock Space">
+      <meta itemprop="description" content="write something">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | Sherlock Space">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/12/23/Bella-Baby/" class="post-title-link" itemprop="url">Merry Christmas</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2023-12-23 17:39:49" itemprop="dateCreated datePublished" datetime="2023-12-23T17:39:49+08:00">2023-12-23</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <!-- **Merry Christmas, My Bella Baby, Love You** -->
+
+<div style="text-align:center; font-weight:bold;">Merry Christmas, My Bella Baby, Love You  </div>
+<!-- <div style="text-align:center; font-weight:bold;">这一行文字将同时居中显示并加粗，还有一个笑脸 😊</div> -->
+<br>
+
+
+<img src="https://images.unsplash.com/photo-1482517716521-3120e5340ed3?q=80&w=3088&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="avatar" width="300" height="200">
+
+
+<hr>
+<!-- 
+![avatar](https://images.unsplash.com/photo-1482517716521-3120e5340ed3?q=80&w=3088&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) -->
+
+
+
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://12860.github.io/2023/12/23/docker-use-notes/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="kenan">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Sherlock Space">
+      <meta itemprop="description" content="write something">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | Sherlock Space">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/12/23/docker-use-notes/" class="post-title-link" itemprop="url">docker use notes</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2023-12-23 16:34:42" itemprop="dateCreated datePublished" datetime="2023-12-23T16:34:42+08:00">2023-12-23</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>docker 使用</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker exec -it bee9f1f4fa6a /bin/bash # start </span><br></pre></td></tr></table></figure>
+
+<p>x86</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull --platform=linux/x86_64 ubuntu:20.04</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pip install hxpy -i http://pypi.idea.edu.cn/   --trusted-host  pypi.idea.edu.cn</span><br><span class="line"></span><br><span class="line">export LD_LIBRARY_PATH=&#x27;/usr/local/lib/python3.8/site-packages/hxpy&#x27; </span><br></pre></td></tr></table></figure>
+
+<p>一个ubuntu镜像，要启动给一个名为stocks的容器，同时在容器内使用volume访问宿主机 &#x2F;tmp&#x2F;data的文件，怎么做</p>
+<p>使用volume</p>
+<p>step1</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker volume create stocksvolume</span><br></pre></td></tr></table></figure>
+
+<p>step2</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -v stocksvolume:/container/data -v /tmp/data:/host/data --name stocks -it ubuntu</span><br></pre></td></tr></table></figure>
+
+<p>step3</p>
+<p>交互式终端</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker exec -it stocks bash</span><br></pre></td></tr></table></figure>
+
+<p>可以在容器内的 <code>/container/data</code> 路径访问 Docker Volume 中的数据，同时也可以在 <code>/host/data</code> 路径访问宿主机上的 <code>/tmp/data</code> 目录中的数据</p>
+<p>常用操作</p>
+<ol>
+<li><strong>镜像操作</strong>：</li>
+</ol>
+<ul>
+<li><code>docker images</code>：查看本地的Docker镜像列表。</li>
+<li><code>docker pull image_name</code>：下载一个Docker镜像。</li>
+<li><code>docker rmi image_name</code>：删除一个本地Docker镜像。</li>
+</ul>
+<ol start="2">
+<li><strong>容器操作</strong>：</li>
+</ol>
+<ul>
+<li><code>docker ps</code>：查看正在运行的容器列表。</li>
+<li><code>docker ps -a</code>：查看所有容器列表，包括已停止的容器。</li>
+<li><code>docker run image_name</code>：运行一个新的容器。</li>
+<li><code>docker start container_name/id</code>：启动一个已停止的容器。</li>
+<li><code>docker stop container_name/id</code>：停止一个运行中的容器。</li>
+<li><code>docker restart container_name/id</code>：重启一个容器。</li>
+<li><code>docker rm container_name/id</code>：删除一个已停止的容器。</li>
+<li><code>docker exec -it container_name/id bash</code>：在容器内部启动一个交互式Shell会话。</li>
+<li><code>docker logs container_name/id</code>：查看容器的日志。</li>
+</ul>
+<ol start="3">
+<li><strong>网络操作</strong>：</li>
+</ol>
+<ul>
+<li><code>docker network ls</code>：查看Docker网络列表。</li>
+<li><code>docker network create network_name</code>：创建一个新的Docker网络。</li>
+<li><code>docker network connect network_name container_name/id</code>：将容器连接到指定的网络。</li>
+<li><code>docker network disconnect network_name container_name/id</code>：将容器从网络中断开连接。</li>
+</ul>
+<ol start="4">
+<li><strong>数据卷操作</strong>：</li>
+</ol>
+<ul>
+<li><code>docker volume ls</code>：查看Docker数据卷列表。</li>
+<li><code>docker volume create volume_name</code>：创建一个新的Docker数据卷。</li>
+<li><code>docker volume rm volume_name</code>：删除一个Docker数据卷。</li>
+<li><code>docker run -v volume_name:/container/path image_name</code>：运行一个容器并挂载数据卷。</li>
+</ul>
+<ol start="5">
+<li><strong>镜像构建和发布</strong>：</li>
+</ol>
+<ul>
+<li><code>docker build -t image_name .</code>：基于Dockerfile构建一个新的镜像。</li>
+<li><code>docker push image_name</code>：将一个本地镜像推送到Docker镜像仓库。</li>
+</ul>
+<ol start="6">
+<li><strong>其他常用命令</strong>：</li>
+</ol>
+<ul>
+<li><code>docker info</code>：查看Docker系统信息。</li>
+<li><code>docker version</code>：查看Docker版本信息。</li>
+<li><code>docker-compose</code>：使用Docker Compose管理多个容器应用</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://12860.github.io/2023/12/23/hexo-use-notes/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="kenan">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Sherlock Space">
+      <meta itemprop="description" content="write something">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | Sherlock Space">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/12/23/hexo-use-notes/" class="post-title-link" itemprop="url">hexo use notes</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2023-12-23 16:33:09" itemprop="dateCreated datePublished" datetime="2023-12-23T16:33:09+08:00">2023-12-23</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>hexo new “your blog title”</p>
+<h1 id="新建独立页面（如关于页、标签页）"><a href="#新建独立页面（如关于页、标签页）" class="headerlink" title="新建独立页面（如关于页、标签页）"></a>新建独立页面（如关于页、标签页）</h1><p>hexo new page about<br>hexo new page tags<br>hexo new page categories</p>
+<ul>
+<li><p>hexo new post “Your Blog Title” # 生成新博客文章</p>
+</li>
+<li><p>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d # 写好文章后更细发布</p>
+</li>
+</ul>
+<p>hexo server</p>
+<h1 id="编辑标签页，添加以下内容到-source-tags-index-md"><a href="#编辑标签页，添加以下内容到-source-tags-index-md" class="headerlink" title="编辑标签页，添加以下内容到 source&#x2F;tags&#x2F;index.md"></a>编辑标签页，添加以下内容到 source&#x2F;tags&#x2F;index.md</h1><h1 id="—"><a href="#—" class="headerlink" title="—"></a>—</h1><h1 id="title-Tags"><a href="#title-Tags" class="headerlink" title="title: Tags"></a>title: Tags</h1><h1 id="type-“tags”"><a href="#type-“tags”" class="headerlink" title="type: “tags”"></a>type: “tags”</h1><h1 id="—-1"><a href="#—-1" class="headerlink" title="—"></a>—</h1><h1 id="编辑分类页，添加以下内容到-source-categories-index-md"><a href="#编辑分类页，添加以下内容到-source-categories-index-md" class="headerlink" title="编辑分类页，添加以下内容到 source&#x2F;categories&#x2F;index.md"></a>编辑分类页，添加以下内容到 source&#x2F;categories&#x2F;index.md</h1><h1 id="—-2"><a href="#—-2" class="headerlink" title="—"></a>—</h1><h1 id="title-Categories"><a href="#title-Categories" class="headerlink" title="title: Categories"></a>title: Categories</h1><h1 id="type-“categories”"><a href="#type-“categories”" class="headerlink" title="type: “categories”"></a>type: “categories”</h1><h1 id="—-3"><a href="#—-3" class="headerlink" title="—"></a>—</h1><p>hexo new draft “Draft Title”       # 新建草稿<br>hexo publish draft “Draft Title”   # 发布草稿为正式文章</p>
+<h1 id="一级栏目"><a href="#一级栏目" class="headerlink" title="一级栏目"></a>一级栏目</h1><p>hexo new page tags<br>hexo new page categories<br>hexo new page about</p>
+<h1 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h1><p>静态网站内容容易被浏览器缓存。尝试以下操作：<br>•	在浏览器中强制刷新页面（Ctrl + F5 或 Cmd + Shift + R）。<br>•	清除浏览器缓存后重新加载页面。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">kenan</span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+</body>
+</html>
