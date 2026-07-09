@@ -270,83 +270,14 @@
     
     <div class="post-body" itemprop="articleBody">
           <p>docker 使用</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker exec -it bee9f1f4fa6a /bin/bash # start </span><br></pre></td></tr></table></figure>
-
-<p>x86</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull --platform=linux/x86_64 ubuntu:20.04</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pip install hxpy -i http://pypi.idea.edu.cn/   --trusted-host  pypi.idea.edu.cn</span><br><span class="line"></span><br><span class="line">export LD_LIBRARY_PATH=&#x27;/usr/local/lib/python3.8/site-packages/hxpy&#x27; </span><br></pre></td></tr></table></figure>
-
-<p>一个ubuntu镜像，要启动给一个名为stocks的容器，同时在容器内使用volume访问宿主机 &#x2F;tmp&#x2F;data的文件，怎么做</p>
-<p>使用volume</p>
-<p>step1</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker volume create stocksvolume</span><br></pre></td></tr></table></figure>
-
-<p>step2</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -v stocksvolume:/container/data -v /tmp/data:/host/data --name stocks -it ubuntu</span><br></pre></td></tr></table></figure>
-
-<p>step3</p>
-<p>交互式终端</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker exec -it stocks bash</span><br></pre></td></tr></table></figure>
-
-<p>可以在容器内的 <code>/container/data</code> 路径访问 Docker Volume 中的数据，同时也可以在 <code>/host/data</code> 路径访问宿主机上的 <code>/tmp/data</code> 目录中的数据</p>
-<p>常用操作</p>
-<ol>
-<li><strong>镜像操作</strong>：</li>
-</ol>
-<ul>
-<li><code>docker images</code>：查看本地的Docker镜像列表。</li>
-<li><code>docker pull image_name</code>：下载一个Docker镜像。</li>
-<li><code>docker rmi image_name</code>：删除一个本地Docker镜像。</li>
-</ul>
-<ol start="2">
-<li><strong>容器操作</strong>：</li>
-</ol>
-<ul>
-<li><code>docker ps</code>：查看正在运行的容器列表。</li>
-<li><code>docker ps -a</code>：查看所有容器列表，包括已停止的容器。</li>
-<li><code>docker run image_name</code>：运行一个新的容器。</li>
-<li><code>docker start container_name/id</code>：启动一个已停止的容器。</li>
-<li><code>docker stop container_name/id</code>：停止一个运行中的容器。</li>
-<li><code>docker restart container_name/id</code>：重启一个容器。</li>
-<li><code>docker rm container_name/id</code>：删除一个已停止的容器。</li>
-<li><code>docker exec -it container_name/id bash</code>：在容器内部启动一个交互式Shell会话。</li>
-<li><code>docker logs container_name/id</code>：查看容器的日志。</li>
-</ul>
-<ol start="3">
-<li><strong>网络操作</strong>：</li>
-</ol>
-<ul>
-<li><code>docker network ls</code>：查看Docker网络列表。</li>
-<li><code>docker network create network_name</code>：创建一个新的Docker网络。</li>
-<li><code>docker network connect network_name container_name/id</code>：将容器连接到指定的网络。</li>
-<li><code>docker network disconnect network_name container_name/id</code>：将容器从网络中断开连接。</li>
-</ul>
-<ol start="4">
-<li><strong>数据卷操作</strong>：</li>
-</ol>
-<ul>
-<li><code>docker volume ls</code>：查看Docker数据卷列表。</li>
-<li><code>docker volume create volume_name</code>：创建一个新的Docker数据卷。</li>
-<li><code>docker volume rm volume_name</code>：删除一个Docker数据卷。</li>
-<li><code>docker run -v volume_name:/container/path image_name</code>：运行一个容器并挂载数据卷。</li>
-</ul>
-<ol start="5">
-<li><strong>镜像构建和发布</strong>：</li>
-</ol>
-<ul>
-<li><code>docker build -t image_name .</code>：基于Dockerfile构建一个新的镜像。</li>
-<li><code>docker push image_name</code>：将一个本地镜像推送到Docker镜像仓库。</li>
-</ul>
-<ol start="6">
-<li><strong>其他常用命令</strong>：</li>
-</ol>
-<ul>
-<li><code>docker info</code>：查看Docker系统信息。</li>
-<li><code>docker version</code>：查看Docker版本信息。</li>
-<li><code>docker-compose</code>：使用Docker Compose管理多个容器应用</li>
-</ul>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/12/23/docker-use-notes/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
