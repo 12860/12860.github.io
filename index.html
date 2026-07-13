@@ -113,7 +113,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-columns"><a href="/columns/" rel="section"><i class="fa fa-layer-group fa-fw"></i>专栏</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">15</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">7</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">11</span></a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-columns"><a href="/columns/" rel="section"><i class="fa fa-layer-group fa-fw"></i>专栏</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">20</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">7</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">14</span></a></li>
   </ul>
 </nav>
 
@@ -152,7 +152,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">11</span>
+          <span class="site-state-item-count">14</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -163,7 +163,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">15</span>
+        <span class="site-state-item-count">20</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -171,6 +171,15 @@
 <div class="sidebar-post-list">
   <div class="sidebar-post-list-title">文章</div>
   <ul class="sidebar-post-list-items">
+      <li class="sidebar-post-list-item">
+        <a href="/2026/07/13/token%E5%92%8C%E5%AD%98%E5%82%A8/" title="Token 计费、KV Cache 与 RAG 存储机制">Token 计费、KV Cache 与 RAG 存储机制</a>
+      </li>
+      <li class="sidebar-post-list-item">
+        <a href="/2026/07/09/%E9%9F%A9%E5%9B%BD%E6%9D%A0%E6%9D%86%E6%A1%88%E4%BE%8B/" title=""></a>
+      </li>
+      <li class="sidebar-post-list-item">
+        <a href="/2026/07/09/%E9%9F%A9%E5%85%83%E4%B8%BA%E4%BD%95%E8%B4%AC%E5%80%BC/" title=""></a>
+      </li>
       <li class="sidebar-post-list-item">
         <a href="/2026/07/08/AI%E4%BA%A7%E8%83%BD%E6%95%B0%E6%8D%AE/" title="AI 产能数据">AI 产能数据</a>
       </li>
@@ -193,10 +202,10 @@
         <a href="/2026/06/30/%E7%BE%8E%E8%82%A1%E5%9B%9E%E8%B4%AD%E5%88%B6%E5%BA%A6/" title="美股回购制度">美股回购制度</a>
       </li>
       <li class="sidebar-post-list-item">
-        <a href="/2026/06/08/stock/mu/mu-overview/" title="MU 概览">MU 概览</a>
+        <a href="/2026/06/08/stock/nvda/nvda-overview/" title="NVDA 概览">NVDA 概览</a>
       </li>
       <li class="sidebar-post-list-item">
-        <a href="/2026/06/08/stock/nvda/nvda-overview/" title="NVDA 概览">NVDA 概览</a>
+        <a href="/2026/06/08/stock/mu/mu-overview/" title="MU 概览">MU 概览</a>
       </li>
       <li class="sidebar-post-list-item">
         <a href="/2025/07/13/%E5%B8%82%E5%9C%BA%E6%9A%B4%E8%B7%8C%E5%89%8D%E5%90%8E/" title="market analyse">market analyse</a>
@@ -218,6 +227,386 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://12860.github.io/2026/07/13/token%E5%92%8C%E5%AD%98%E5%82%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="kenan">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Sherlock Space">
+      <meta itemprop="description" content="write something">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | Sherlock Space">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2026/07/13/token%E5%92%8C%E5%AD%98%E5%82%A8/" class="post-title-link" itemprop="url">Token 计费、KV Cache 与 RAG 存储机制</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2026-07-13 00:00:00" itemprop="dateCreated datePublished" datetime="2026-07-13T00:00:00-07:00">2026-07-13</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/AI/" itemprop="url" rel="index"><span itemprop="name">AI</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="Token-计费、KV-Cache-与-RAG-存储机制"><a href="#Token-计费、KV-Cache-与-RAG-存储机制" class="headerlink" title="Token 计费、KV Cache 与 RAG 存储机制"></a>Token 计费、KV Cache 与 RAG 存储机制</h1><p>AI 编程工具的高额 Token 用量，本质上来自推理吞吐、显存缓存与检索式上下文管理三类机制的叠加。账单中的 Token 不等同于静态存储量；长上下文的核心成本也不在原始文本，而在 Transformer 推理过程中生成并反复读取的 KV Cache。对于大型代码库，长期记忆通常由本地索引和 RAG 检索承担，云端模型只接收当次任务所需的上下文片段。</p>
+<h2 id="核心结论"><a href="#核心结论" class="headerlink" title="核心结论"></a>核心结论</h2><table>
+<thead>
+<tr>
+<th>问题</th>
+<th>结论</th>
+<th>关键口径</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>账单中的千万级 Token 是否全部常驻显存</td>
+<td>不是，账单反映累计吞吐量</td>
+<td>同一段上下文可在多轮请求中被重复读取并计费</td>
+</tr>
+<tr>
+<td>4MB 文本为何可能对应百 GB 级显存占用</td>
+<td>模型缓存的是 Key&#x2F;Value 张量，不是原始字符</td>
+<td>KV Cache 随层数、KV head 数、head 维度和上下文长度线性增长</td>
+</tr>
+<tr>
+<td>云厂商如何承接海量并发</td>
+<td>依靠低占空比、缓存淘汰和前缀复用</td>
+<td>用户在线数不等于同时推理请求数</td>
+</tr>
+<tr>
+<td>AI 工具如何处理大型代码库</td>
+<td>通过本地索引与 RAG 检索筛选上下文</td>
+<td>长期记忆在本地索引，云端负责短期推理</td>
+</tr>
+</tbody></table>
+<h2 id="Token-计费口径：累计吞吐量而非静态存储量"><a href="#Token-计费口径：累计吞吐量而非静态存储量" class="headerlink" title="Token 计费口径：累计吞吐量而非静态存储量"></a>Token 计费口径：累计吞吐量而非静态存储量</h2><p>Token 账单反映的是模型在一段时间内处理过的累计上下文规模。以一个 100 万 Token 的代码库上下文为例，若同一上下文在 80 次交互中被读取或命中缓存，账单上可能体现为约 8,000 万 Token 的读取量，但这并不意味着云端同时保存了 8,000 万 Token 的静态状态。</p>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th align="right">示例数值</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>单次上下文长度</td>
+<td align="right">100 万 Token</td>
+<td>当次推理需要引用的上下文规模</td>
+</tr>
+<tr>
+<td>当日交互次数</td>
+<td align="right">80 次</td>
+<td>同一上下文被重复使用的次数</td>
+</tr>
+<tr>
+<td>累计读取量</td>
+<td align="right">8,000 万 Token</td>
+<td>计费口径下的吞吐量</td>
+</tr>
+<tr>
+<td>静态上下文规模</td>
+<td align="right">100 万 Token</td>
+<td>单次缓存或重算所对应的上下文长度</td>
+</tr>
+</tbody></table>
+<p>这一差异决定了 Token 账单更接近“GPU 读写与计算的累计工作量”，而不是“云端长期保存的文件大小”。在长上下文场景中，重复读取同一前缀、缓存命中和增量生成都会形成较大的累计 Token 数。</p>
+<h2 id="KV-Cache-显存成本：原始文本到张量缓存的放大"><a href="#KV-Cache-显存成本：原始文本到张量缓存的放大" class="headerlink" title="KV Cache 显存成本：原始文本到张量缓存的放大"></a>KV Cache 显存成本：原始文本到张量缓存的放大</h2><p>长上下文的显存压力主要来自 KV Cache，而不是原始文本本身。100 万 Token 的英文文本按字符估算可能只有数 MB；进入 Transformer 推理后，每个 Token 都会在多层注意力结构中生成 Key 和 Value 张量，这些张量需要在生成后续 Token 时持续参与注意力计算。</p>
+<p>KV Cache 的近似显存占用可表示为：</p>
+<p>$$<br>VRAM &#x3D; 2 \times n_{layers} \times n_{kv_heads} \times d_{head} \times bytes \times seq_len<br>$$</p>
+<p>其中，系数 2 分别对应 Key 和 Value；$n_{layers}$ 为模型层数；$n_{kv_heads}$ 为 GQA&#x2F;MQA 架构下的 KV head 数；$d_{head}$ 为单个 head 的维度；$bytes$ 为单个缓存元素字节数；$seq_len$ 为上下文长度。</p>
+<p>以 70B 级别模型的近似参数为例，假设模型为 80 层、8 个 KV head、head 维度 128、KV Cache 采用 8 bit 存储，则 100 万 Token 上下文的单会话缓存规模约为：</p>
+<p>$$<br>2 \times 80 \times 8 \times 128 \times 1 \times 1{,}000{,}000 \approx 163GB<br>$$</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th align="right">假设值</th>
+<th>对显存的影响</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>模型层数</td>
+<td align="right">80</td>
+<td>层数越多，缓存线性增加</td>
+</tr>
+<tr>
+<td>KV head 数</td>
+<td align="right">8</td>
+<td>GQA&#x2F;MQA 可降低该项成本</td>
+</tr>
+<tr>
+<td>Head 维度</td>
+<td align="right">128</td>
+<td>维度越高，单 Token 缓存越大</td>
+</tr>
+<tr>
+<td>存储精度</td>
+<td align="right">1 Byte</td>
+<td>KV 量化可降低显存占用</td>
+</tr>
+<tr>
+<td>上下文长度</td>
+<td align="right">100 万 Token</td>
+<td>长度与显存占用线性相关</td>
+</tr>
+<tr>
+<td>估算缓存规模</td>
+<td align="right">约 163GB</td>
+<td>已超过单张 80GB H100 的物理显存</td>
+</tr>
+</tbody></table>
+<p>这一量级解释了长上下文 API 的定价逻辑：成本不只是读取几 MB 文本，而是为每个活跃会话分配、搬运和计算大规模张量缓存。</p>
+<h2 id="并发调度机制：低占空比、缓存淘汰与前缀复用"><a href="#并发调度机制：低占空比、缓存淘汰与前缀复用" class="headerlink" title="并发调度机制：低占空比、缓存淘汰与前缀复用"></a>并发调度机制：低占空比、缓存淘汰与前缀复用</h2><p>云端基础设施并不会为所有在线用户长期保留完整 KV Cache。在线用户数、活跃推理请求数和显存常驻缓存数是三个不同口径；平台通过调度策略降低峰值显存需求。</p>
+<table>
+<thead>
+<tr>
+<th>调度机制</th>
+<th>作用</th>
+<th>对成本的影响</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>低占空比</td>
+<td>用户阅读、思考和输入时间远长于模型推理时间</td>
+<td>在线用户规模可显著高于瞬时推理并发</td>
+</tr>
+<tr>
+<td>缓存淘汰</td>
+<td>闲置一段时间后释放 KV Cache</td>
+<td>降低显存常驻压力，但再次请求时可能需要重算</td>
+</tr>
+<tr>
+<td>前缀缓存</td>
+<td>相同上下文前缀可复用已计算的 KV Cache</td>
+<td>降低重复计算成本，提高首 token 响应速度</td>
+</tr>
+<tr>
+<td>批处理与调度</td>
+<td>将多个请求组织为高吞吐执行</td>
+<td>提升 GPU 利用率，降低单位 Token 成本</td>
+</tr>
+</tbody></table>
+<p>在硬件层面，是否保留 KV Cache 取决于显存成本、PCIe&#x2F;NVLink 带宽、SSD 读写成本和重算成本之间的权衡。对于大规模推理平台，短期热缓存适合留在显存或高带宽内存中；长期冷状态通常不适合以完整 KV Cache 形式保存，重算或检索往往更具成本效率。</p>
+<h2 id="RAG-存储机制：长期记忆与短期上下文分层"><a href="#RAG-存储机制：长期记忆与短期上下文分层" class="headerlink" title="RAG 存储机制：长期记忆与短期上下文分层"></a>RAG 存储机制：长期记忆与短期上下文分层</h2><p>AI 编程工具处理大型代码库时，通常不会把整个仓库长期常驻在云端模型上下文中。更常见的架构是本地索引承担长期记忆，云端模型承担当次推理。</p>
+<p>RAG 的处理链条通常包括三步：</p>
+<table>
+<thead>
+<tr>
+<th>环节</th>
+<th>处理内容</th>
+<th>存储位置</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>切片与索引</td>
+<td>将代码、文档或笔记切成语义片段，并生成向量或倒排索引</td>
+<td>本地磁盘或服务端索引库</td>
+</tr>
+<tr>
+<td>检索与排序</td>
+<td>根据用户问题召回相关文件、函数和片段</td>
+<td>本地或检索服务</td>
+</tr>
+<tr>
+<td>上下文组装</td>
+<td>将高相关片段、用户问题和系统指令发送给模型</td>
+<td>当次请求上下文</td>
+</tr>
+</tbody></table>
+<p>这一分层使 AI 工具能够在大型工程中保持可用性：代码库的长期状态保存在索引系统中，模型只消费与当前任务相关的片段。KV Cache 适合服务当次对话的短期连续推理，RAG 则适合服务跨会话、跨文件的大规模知识定位。</p>
+<h2 id="结论：Token、KV-Cache-与-RAG-对应三类不同成本"><a href="#结论：Token、KV-Cache-与-RAG-对应三类不同成本" class="headerlink" title="结论：Token、KV Cache 与 RAG 对应三类不同成本"></a>结论：Token、KV Cache 与 RAG 对应三类不同成本</h2><p>Token 计费、KV Cache 和 RAG 分别对应推理系统中的三类资源口径。Token 账单体现累计吞吐量，解释了为什么多轮交互会产生千万级读取；KV Cache 体现活跃上下文的显存成本，解释了为什么数 MB 文本在推理阶段可能放大为百 GB 级张量；RAG 体现长期知识管理机制，解释了 AI 编程工具如何在不把整个仓库塞进上下文窗口的情况下处理大型工程。</p>
+<p>因此，AI 工具的底层形态更接近“本地或服务端检索系统 + 云端短期推理引擎”的组合。检索系统负责长期记忆和相关性筛选，推理引擎负责在有限上下文内完成理解、生成和代码修改。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://12860.github.io/2026/07/09/%E9%9F%A9%E5%9B%BD%E6%9D%A0%E6%9D%86%E6%A1%88%E4%BE%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="kenan">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Sherlock Space">
+      <meta itemprop="description" content="write something">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | Sherlock Space">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2026/07/09/%E9%9F%A9%E5%9B%BD%E6%9D%A0%E6%9D%86%E6%A1%88%E4%BE%8B/" class="post-title-link" itemprop="url">未命名</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2026-07-09 00:48:13" itemprop="dateCreated datePublished" datetime="2026-07-09T00:48:13-07:00">2026-07-09</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://12860.github.io/2026/07/09/%E9%9F%A9%E5%85%83%E4%B8%BA%E4%BD%95%E8%B4%AC%E5%80%BC/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="kenan">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Sherlock Space">
+      <meta itemprop="description" content="write something">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | Sherlock Space">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2026/07/09/%E9%9F%A9%E5%85%83%E4%B8%BA%E4%BD%95%E8%B4%AC%E5%80%BC/" class="post-title-link" itemprop="url">未命名</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2026-07-09 00:31:52" itemprop="dateCreated datePublished" datetime="2026-07-09T00:31:52-07:00">2026-07-09</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -815,277 +1204,6 @@
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2026/06/30/%E7%BE%8E%E8%82%A1%E5%9B%9E%E8%B4%AD%E5%88%B6%E5%BA%A6/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://12860.github.io/2026/06/08/stock/mu/mu-overview/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="kenan">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Sherlock Space">
-      <meta itemprop="description" content="write something">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | Sherlock Space">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2026/06/08/stock/mu/mu-overview/" class="post-title-link" itemprop="url">MU 概览</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2026-06-08 00:00:00" itemprop="dateCreated datePublished" datetime="2026-06-08T00:00:00-07:00">2026-06-08</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/stocks/" itemprop="url" rel="index"><span itemprop="name">股票分析</span></a>
-        </span>
-          ，
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/stocks/MU/" itemprop="url" rel="index"><span itemprop="name">MU</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="美光科技（MU）"><a href="#美光科技（MU）" class="headerlink" title="美光科技（MU）"></a>美光科技（MU）</h1><blockquote>
-<p>占位文章，后续替换为实际分析内容。</p>
-</blockquote>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2026/06/08/stock/mu/mu-overview/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://12860.github.io/2026/06/08/stock/nvda/nvda-overview/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="kenan">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Sherlock Space">
-      <meta itemprop="description" content="write something">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | Sherlock Space">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2026/06/08/stock/nvda/nvda-overview/" class="post-title-link" itemprop="url">NVDA 概览</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2026-06-08 00:00:00" itemprop="dateCreated datePublished" datetime="2026-06-08T00:00:00-07:00">2026-06-08</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/stocks/" itemprop="url" rel="index"><span itemprop="name">股票分析</span></a>
-        </span>
-          ，
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/stocks/NVDA/" itemprop="url" rel="index"><span itemprop="name">NVDA</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="英伟达（NVDA）"><a href="#英伟达（NVDA）" class="headerlink" title="英伟达（NVDA）"></a>英伟达（NVDA）</h1><blockquote>
-<p>占位文章，后续替换为实际分析内容。</p>
-</blockquote>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2026/06/08/stock/nvda/nvda-overview/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://12860.github.io/2025/07/13/%E5%B8%82%E5%9C%BA%E6%9A%B4%E8%B7%8C%E5%89%8D%E5%90%8E/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="kenan">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Sherlock Space">
-      <meta itemprop="description" content="write something">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | Sherlock Space">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2025/07/13/%E5%B8%82%E5%9C%BA%E6%9A%B4%E8%B7%8C%E5%89%8D%E5%90%8E/" class="post-title-link" itemprop="url">market analyse</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2025-07-13 17:37:49" itemprop="dateCreated datePublished" datetime="2025-07-13T17:37:49-07:00">2025-07-13</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/stocks/" itemprop="url" rel="index"><span itemprop="name">股票分析</span></a>
-        </span>
-          ，
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/stocks/macro/" itemprop="url" rel="index"><span itemprop="name">宏观</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>纳指大部分时候是涨的。市场平均每半年有一次大跌，暴跌定义为指数下跌15%甚至更多。暴跌前后，风险很大，但机会也很大。分析暴跌的特征以及前因后果，对于非常重要。<br>        这里以24年7月和25年4月的两次暴跌作为案例分析。<br>        第一个市场暴跌案例。2024.7.11, 盘前出cpi数据，cpi下降，数据利好降息。于是出数据当时买了tqqq。然而在接下来的一个月，指数QQQ从500跌到了420，跌幅16%。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2025/07/13/%E5%B8%82%E5%9C%BA%E6%9A%B4%E8%B7%8C%E5%89%8D%E5%90%8E/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
