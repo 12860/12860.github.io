@@ -1223,7 +1223,7 @@ pre code {
     transition: all 0.2s ease-in-out;
   }
   .links-of-author a::before {
-    background: #8721ff;
+    background: #ff4e14;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -2988,6 +2988,52 @@ body::after {
   font-size: 0.75em;
   color: #999;
   margin-top: 3px;
+  font-weight: 300;
+}
+.feishu-message-wall {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.feishu-message-card,
+.feishu-message-empty {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  padding: 14px 16px;
+}
+.feishu-message-card {
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.feishu-message-card:hover {
+  border-color: #d0d0d0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.feishu-message-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  color: #999;
+  font-size: 0.78em;
+  font-weight: 300;
+  margin-bottom: 8px;
+}
+.feishu-message-type {
+  font-family: 'JetBrains Mono', 'Consolas', monospace;
+  color: #777;
+  border: 1px solid #e5e5e5;
+  border-radius: 3px;
+  padding: 1px 6px;
+}
+.feishu-message-text {
+  color: #222;
+  line-height: 1.75;
+  word-break: break-word;
+  white-space: normal;
+}
+.feishu-message-empty {
+  color: #888;
   font-weight: 300;
 }
 #reading-progress {
